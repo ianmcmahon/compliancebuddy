@@ -1,0 +1,5 @@
+﻿CODE,MFR,MODEL,TYPE-ACFT,TYPE-ENG,AC-CAT,BUILD-CERT-IND,NO-ENG,NO-SEATS,AC-WEIGHT,SPEED,
+7103002,PIPER                         ,PA-30               ,5,1 ,1,0,02,004,CLASS 1,0139,
+7102802,PIPER                         ,PA-28-140           ,4,1 ,1,0,01,004,CLASS 1,0107,
+05605EA,SMITH DAVID H                 ,RV-6                ,4,1 ,1,1,01,002,CLASS 1,0000,
+8360608,SMITH                         ,AEROSTAR 601P       ,5,1 ,1,0,02,006,CLASS 1,0144,

@@ -1,0 +1,118 @@
+{{ define "title" }}
+	<title>Compliance Buddy -- Blank</title>
+{{ end }}
+
+{{ define "content" }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Create Aircraft</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Registration Data
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            {{ template "registration-form" . }}
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+{{ end }}
+
+{{ define "registration-form" }}
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="form-group">
+                <label>Tail Number</label>
+                <input class="form-control">
+                <p class="help-block">US registered aircraft will autopopulate if possible</p>
+            </div>
+        </div>
+        <div class="col-lg-6">
+        </div>
+        <div class="col-lg-2">
+            <div class="form-group">
+                <label>Category</label>
+                <select class="form-control">
+                {{ range $val, $disp := .ReferenceData.CategoryOptions }}
+                    <option value="{{ $val }}">{{ $disp }}</option>
+                {{ end }}
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="form-group">
+                <label>Class</label>
+                <select class="form-control">
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1">
+            <div class="form-group">
+                <label>Model Year</label>
+                <input class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="form-group">
+                <label>Manufacturer</label>
+                <input class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="form-group">
+                <label>Model</label>
+                <input class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="form-group">
+                <label>Serial Number</label>
+                <input class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1">
+            <div class="form-group">
+                <label>Num Engines</label>
+                <input class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="form-group">
+                <label>Engine Manufacturer</label>
+                <input class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="form-group">
+                <label>Engine Model</label>
+                <input class="form-control">
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+
+{{ define "page-scripts" }}
+<script>
+
+$(document).ready(function(){
+    $("h1").css("color", "#0088ff");
+});
+
+</script>
+{{ end }}

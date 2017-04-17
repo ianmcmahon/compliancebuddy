@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        {{ block "title" . }}<title>Compliance Buddy</title>{{ end }}
+        {{ template "head" . }}
+	</head>
+	<body>
+	    <div id="wrapper">
+
+		    {{ template "navigation" . }}
+
+	        <!-- Page Content -->
+	        <div id="page-wrapper">
+
+		        {{ template "content" . }}
+
+	        </div>
+	        <!-- /#page-wrapper -->
+
+	    </div>
+	    <!-- /#wrapper -->
+
+	    {{ template "bottom-scripts" . }}
+
+	    {{ block "page-scripts" . }}{{ end }}
+	</body>
+</html>
